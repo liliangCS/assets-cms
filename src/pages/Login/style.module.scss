@@ -1,0 +1,181 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/images/login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .login-box {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // 数值
+    border-radius: 10px;
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 0 20px #999;
+
+    .left {
+      width: 50%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+    .right {
+      background-color: rgba(255, 255, 255, .5);
+      box-sizing: border-box;
+      // 数值
+      width: 50%;
+      padding: 0 40px;
+      
+      h2 {
+        text-align: center;
+      }
+
+      .form {
+        overflow: hidden;
+        // 数值
+        width: 100%;
+        margin-top: 50px;
+
+        .user-info {
+          display: flex;
+          box-sizing: border-box;
+          border-bottom: 1px solid #333;
+          // 数值
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          margin-top: 40px;
+  
+          
+  
+          input {
+            flex: 1;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            // 数值
+            margin-left: 20px;
+            font-size: 16px;
+            letter-spacing: 5px;
+          }
+  
+          span {
+            // 数值
+            font-size: 30px;
+          }
+        }
+
+        .operation {
+          display: flex;
+          justify-content: space-around;
+          // background-color: pink;
+          text-align: center;
+          // 数值
+          margin-top: 60px;
+          width: 100%;
+          height: 32px;
+          line-height: 32px;
+
+          .btn-reset {
+            background-color: #ede3e7;
+            user-select: none;
+            cursor: pointer;
+            // 数值
+            width: 80px;
+            border-radius: 5px;
+          }
+
+          .btn-login {
+            background-color: #2775b6;
+            color: #fff;
+            user-select: none;
+            cursor: pointer;
+            // 数值
+            width: 80px;
+            border-radius: 5px;
+          }
+
+          .btn-reset:hover, .btn-login:hover {
+            filter: brightness(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 移动端适配
+@media screen and (max-width: 800px) {
+  .login {
+
+    .login-box {
+      border-radius: 1.3333vw;
+      width: 80vw;
+      height: 85.3333vw;
+      box-shadow: 0 0 2.6667vw #999;
+
+      .left {
+        display: none;
+      }
+
+      .right {
+        background-color: rgba(255, 255, 255, .9);
+        width: 100%;
+        padding: 0 10.6667vw;
+
+        h2 {
+          font-size: 6.4vw;
+        }
+
+        .form {
+          margin-top: 5.3333vw;
+
+          .user-info {
+            border-width: .2667vw;
+            height: 8vw;
+            line-height: 8vw;
+            margin-top: 10.6667vw;
+
+            input {
+              margin-left: 2.6667vw;
+              font-size: 3.7333vw;
+              letter-spacing: .5333vw;
+            }
+
+            span {
+              font-size: 8vw;
+            }
+          }
+
+          .operation {
+            margin-top: 10.6667vw;
+            height: 8.5333vw;
+            line-height: 8.5333vw;
+            font-size: 4.2667vw;
+
+            .btn-reset {
+              width: 21.3333vw;
+              border-radius: 1.3333vw;
+            }
+
+            .btn-login {
+              width: 21.3333vw;
+              border-radius: 1.3333vw;
+            }
+
+            .btn-reset:hover, .btn-login:hover {
+              filter: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
