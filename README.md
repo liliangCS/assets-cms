@@ -4,8 +4,7 @@
 ## 技术栈：
 react + ts + koa + mysql
 ## 项目截图
-##### 登陆界面
-- pc端
+##### pc端登陆界面
 ![](https://raw.githubusercontent.com/liliangCS/assets-cms/main/public/%E7%99%BB%E5%BD%95%E9%A1%B51.jpg)
-- 移动端
+##### 移动端登陆界面
 ![](https://raw.githubusercontent.com/liliangCS/assets-cms/main/public/%E7%99%BB%E9%99%86%E9%A1%B52.jpg)
