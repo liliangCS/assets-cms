@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { AxiosResponse } from "axios"
 import { userLogin } from "../../../api"
+import registryRoute from "../../../utils/registryRoute"
 
 interface IResponseType extends AxiosResponse {
   token?: string
@@ -20,6 +21,7 @@ const useForm = () => {
     const res: IResponseType = await userLogin(username, password)
     if (res.token) {
       sessionStorage.setItem("token", res.token)
+      registryRoute()
       navigate("/home")
     }
   }
