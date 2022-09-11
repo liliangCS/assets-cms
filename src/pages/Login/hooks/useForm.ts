@@ -1,5 +1,5 @@
 import {useState} from "react"
-
+import { userLogin } from "../../../api"
 const useForm = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
@@ -7,9 +7,9 @@ const useForm = () => {
     setUsername("")
     setPassword("")
   }
-  const loginBtn = () => {
-    const formInfo = { username, password }
-    console.log(formInfo)
+  const loginBtn = async () => {
+    const res = await userLogin(username, password)
+    console.log(res)
   }
 
   return {
