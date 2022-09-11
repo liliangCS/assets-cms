@@ -4,3 +4,29 @@ body {
   margin: 0;
   font-family: "宋体";
 }
+
+// 弹出框样式
+.messageBox {
+  white-space: nowrap;
+  position: fixed;
+  z-index: 999;
+  background-color: #fff;
+  color: #000;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "楷体";
+  // 数值
+  padding: 10px;
+  top: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .messageBox {
+    padding: 2.6667vw;
+    top: 5.3333vw;
+    font-size: 5.3333vw;
+    border-radius: 1.3333vw;
+  }
+}

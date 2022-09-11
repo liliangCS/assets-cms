@@ -1,11 +1,13 @@
-import { Navigate } from "react-router-dom"
+import {lazy} from "react"
+import {Navigate} from "react-router-dom"
 import Login from "../pages/Login"
-import Home from "../pages/Home"
+const Home = lazy(() => import("../pages/Home"))
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage"))
 
 const routes = [
   {
     path: "/",
-    element: <Navigate to="/login" />
+    element: sessionStorage.getItem("token") ? <Navigate to="/home" /> : <Navigate to="/login" />
   },
   {
     path: "/login",
@@ -14,6 +16,10 @@ const routes = [
   {
     path: "/home",
     element: <Home />
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />
   }
 ]
 

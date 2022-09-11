@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from "axios"
+import messageBox from "./messageBox"
 
 class HttpRequest {
   instance: AxiosInstance
@@ -11,8 +12,10 @@ class HttpRequest {
       return config
     })
     this.instance.interceptors.response.use(response => {
+      messageBox(response.data.msg)
       return response.data
     }, reject => {
+      messageBox(reject.response.data)
       return reject.response.data
     })
   }
