@@ -1,3 +1,16 @@
 .home {
-  // background-color: red;
+  display: flex;
+  height: 100vh;
+  .aside {
+    flex: 1;
+    background-color: pink;
+    // 数值
+    width: 300px;
+    // height: 100vh;
+  }
+
+  .main {
+    flex: 5;
+    background-color: #999;
+  }
 }
