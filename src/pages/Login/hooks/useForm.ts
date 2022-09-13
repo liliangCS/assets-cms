@@ -21,6 +21,7 @@ const useForm = () => {
     const res: IResponseType = await userLogin(username, password)
     if (res.token) {
       sessionStorage.setItem("token", res.token)
+      sessionStorage.setItem("username", username)
       registryRoute()
       navigate("/home")
     }

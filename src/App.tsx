@@ -1,13 +1,12 @@
 import React from "react"
-import { useRoutes } from "react-router-dom"
+import { useRoutes} from "react-router-dom"
+import useLoginStatus from "./hooks/useLoginStatus"
 import routes from "./router"
-import registryRoute from "./utils/registryRoute"
-import checkLoginStatus from "./utils/checkLoginStatus"
+
 
 export default function App() {
-  if (checkLoginStatus()) {
-    registryRoute()
-  }
+  // 判断是否登陆，未登录则跳转到登陆页
+  useLoginStatus()
   const element = useRoutes(routes)
   return (
     <div>

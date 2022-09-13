@@ -1,0 +1,24 @@
+.profile {
+  text-align: center;
+  user-select: none;
+  // background-color: pink;
+  // 数值
+  height: 60px;
+  line-height: 60px;
+
+
+  img {
+    object-fit: cover;
+    vertical-align: middle;
+    // 数值
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 100%;
+  }
+
+  span {
+    font-size: 24px;
+    vertical-align: middle;
+  }
+}

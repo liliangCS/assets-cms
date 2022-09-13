@@ -3,11 +3,9 @@
   height: 100vh;
 
   .aside {
-    // overflow-y: scroll;
     background-color: pink;
     // 数值
     width: 240px;
-    // height: 1000px;
   }
 
   .main {
@@ -18,7 +16,8 @@
     .header {
       position: sticky;
       top: 0;
-      background-color: rgb(79, 209, 79);
+      background-image: linear-gradient(180deg, #c6dfc8, #c7d2d4);
+      // background-color: #c7d2d4;
       // 数值
       height: 60px;
     }
@@ -28,9 +27,9 @@
     }
 
     .content {
-      background-color: rgb(231, 234, 156);
+      background-image:linear-gradient(90deg,#e6d2d5,#f0c9cf,#f1c4cd);
+      // background-color: #;
       // 数值
-      // height: calc(100% - 60px);
       height: 2000px;
     }
   }
@@ -55,7 +54,7 @@
         position: sticky;
         top: 0;
         display: flex;
-        height: 40px;
+        height: 10.6667vw;
       }
 
       .content {
