@@ -1,6 +1,7 @@
 .profile {
   text-align: center;
   user-select: none;
+  white-space: nowrap;
   // background-color: pink;
   // 数值
   height: 60px;
@@ -13,11 +14,12 @@
     // 数值
     width: 40px;
     height: 40px;
-    margin-right: 10px;
     border-radius: 100%;
   }
 
   span {
+    
+    margin-left: 10px;
     font-size: 24px;
     vertical-align: middle;
   }

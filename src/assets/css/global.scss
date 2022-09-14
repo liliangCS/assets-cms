@@ -23,6 +23,17 @@ body {
   border-radius: 5px;
 }
 
+
+// 隐藏
+.hidden {
+  display: none;
+}
+
+// 限制宽度
+.limit-width {
+  width: 100px !important;
+}
+
 @media screen and (max-width: 800px) {
   .messageBox {
     padding: 2.6667vw;

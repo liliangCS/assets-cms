@@ -1,6 +1,6 @@
 .side-bar {
-  overflow: auto;
-  width: 240px;
+  overflow: hidden;
+  width: 100%;
   height: 100vh;
   background-image: linear-gradient(180deg, #f2e7e5, #f9e8d0);
 
@@ -10,6 +10,7 @@
     user-select: none;
     cursor: pointer;
     width: 100%;
+    white-space: nowrap;
     // 数值
     height: 60px;
     line-height: 60px;
