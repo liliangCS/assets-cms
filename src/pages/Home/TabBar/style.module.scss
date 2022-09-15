@@ -1,0 +1,17 @@
+.tab-bar {
+  width: 100%;
+  display: flex;
+  background-color: #efefef;
+
+  .item {
+    user-select: none;
+    cursor: pointer;
+    height: 100%;
+    line-height: 10.6667vw;
+    flex: 1;
+    font-size: 5.3333vw;
+    box-sizing: border-box;
+    border: .2667vw solid #aaa;
+    text-align: center;
+  }
+}
