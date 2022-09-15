@@ -1,6 +1,7 @@
 import React from "react"
 import {useLocation, useNavigate} from "react-router-dom"
 import style from "./style.module.scss"
+import Profile from "../../../components/Profile"
 
 export default function Header(props: any) {
   const navigate = useNavigate()
@@ -15,8 +16,18 @@ export default function Header(props: any) {
   const goHome = () => {
     navigate("/home")
   }
+  // 退出登陆
+  const goLogin = () => {
+    if (window.confirm("确定退出登陆吗?")) {
+      sessionStorage.clear()
+      navigate("/login")
+    }
+  }
   return (
     <div className={style.header}>
+      <div className={style.profile}>
+        <Profile></Profile>
+      </div>
       <div className={style.left}>
         <span
           className={
@@ -34,7 +45,7 @@ export default function Header(props: any) {
         )}
       </div>
       <div className={style.right}>
-        <span>退出登陆</span>
+        <span onClick={goLogin}>退出登陆</span>
       </div>
     </div>
   )

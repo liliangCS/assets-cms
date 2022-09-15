@@ -3,6 +3,10 @@
   // 数值
   line-height: 60px;
 
+  .profile {
+    display: none;
+  }
+
   .left {
     float: left;
     margin-left: 10px;
@@ -23,8 +27,30 @@
   }
 
   .right {
+    margin-right: 10px;
     float: right;
     cursor: pointer;
     user-select: none;
   }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    line-height: 12vw;
+
+    .profile {
+      margin-left: 1.3333vw;
+      display: block;
+    }
+
+    .left {
+      display: none;
+    }
+
+    .right {
+      font-size: 4vw;
+      margin-right: 1.3333vw;
+    }
+  }
+  
 }

@@ -18,9 +18,28 @@
   }
 
   span {
-    
     margin-left: 10px;
     font-size: 24px;
     vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile {
+    float: left;
+    height: 12vw;
+    line-height: 12vw;
+
+    img {
+      width: 8vw;
+      height: 8vw;
+    }
+
+    span {
+      margin-left: 1.3333vw;
+      font-size: 4.8vw;
+      vertical-align: none;
+      display: inline-block !important;
+    }
   }
 }

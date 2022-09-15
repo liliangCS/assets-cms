@@ -20,7 +20,7 @@ export default function Home() {
         {/* 头部区域 */}
         <div className={style.header}>
           <Header handleToggle={handleToggle} toggleStatus={toggleStatus}></Header>
-        </div>
+        </div> 
         {/* 移动端tab栏（屏幕宽度800px之下显示） */}
         <div className={style.tab}>tab栏</div>
         {/* 主体内容区 */}
