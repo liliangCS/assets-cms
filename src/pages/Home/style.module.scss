@@ -42,7 +42,6 @@
     }
 
     .main {
-
       .header {
         position: static;
         height: 12vw;
@@ -58,6 +57,24 @@
 
       .content {
         height: 2000px;
+      }
+    }
+  }
+}
+
+// pc端滚动条样式
+@media screen and (min-width: 801px) {
+  .home {
+    .main {
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 0;
+        background-color: #ede3e7;
+      }
+      // 滚动条里面的小方块
+      &::-webkit-scrollbar-thumb {
+        background-color: #3a403e;
+        border-radius: 5px;
       }
     }
   }

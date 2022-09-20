@@ -1,0 +1,99 @@
+.dialog {
+  font-family: "楷体";
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, .3);
+  }
+  
+  .container {
+    box-sizing: border-box;
+    position: fixed;
+    background-color: #fff;
+    // 数值
+    top: 20vh;
+    left: 30%;
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      // 数值
+      margin-bottom: 10px;
+    }
+
+    .handle {
+      display: flex;
+      justify-content: flex-end;
+
+      &>div {
+        cursor: pointer;
+        user-select: none;
+        // 数值
+        padding: 5px 12px;
+        border-radius: 5px;
+
+        &:hover {
+          filter: brightness(1.1);
+        }
+      }
+
+      .cancel {
+        background-color: #ede3e7;
+        color: #000;
+        // 数值
+        margin-right: 5px;
+      }
+
+      .confirm {
+        background-color: #2775b6;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+    .dialog {
+
+      .container {
+        left: 10%;
+        width: 80%;
+        padding: 2.1333vw;
+        border-radius: 1.3333vw;
+
+        h2 {
+          margin-bottom: 1.3333vw;
+          font-size: 5.3333vw;
+        }
+
+        .content {
+          font-size: 3.7333vw;
+        }
+
+        .handle {
+
+          &>div {
+            padding: .8vw 2.6667vw;
+            font-size: 3.7333vw;
+
+            &:hover {
+              filter: none;
+            }
+          }
+
+          .cancel {
+            margin-right: .8vw;
+          }
+        }
+      }
+    }
+}

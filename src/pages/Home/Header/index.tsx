@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import {useLocation, useNavigate} from "react-router-dom"
 import style from "./style.module.scss"
 import Profile from "../../../components/Profile"
+import Dialog from "../../../components/Dialog"
 
 export default function Header(props: any) {
   const navigate = useNavigate()
   const {pathname} = useLocation()
+  const [ isShow, setIsShow ] = useState(false)
   const pathMapRoute = new Map([
     ["/home/assets", "图片资源"],
     ["/home/user", "用户管理"]
@@ -16,15 +18,30 @@ export default function Header(props: any) {
   const goHome = () => {
     navigate("/home")
   }
-  // 退出登陆
-  const goLogin = () => {
-    if (window.confirm("确定退出登陆吗?")) {
-      sessionStorage.clear()
-      navigate("/login")
-    }
+  // 确定退出登陆
+  const handleSureClick = () => {
+    setIsShow(false)
+    sessionStorage.clear()
+    navigate("/login")
   }
+  
+  // 显示弹出框
+  const handleShowDialog = () => {
+    setIsShow(true)
+  }
+  // 关闭弹出框
+  const handCloseDialog = () => {
+    setIsShow(false)
+  }
+
   return (
     <div className={style.header}>
+      <Dialog 
+        title="温馨提示" 
+        isShow={isShow} 
+        onClose={handCloseDialog} 
+        onSure={handleSureClick}
+      >确定退出登陆吗？</Dialog>
       <div className={style.profile}>
         <Profile></Profile>
       </div>
@@ -45,7 +62,7 @@ export default function Header(props: any) {
         )}
       </div>
       <div className={style.right}>
-        <span onClick={goLogin}>退出登陆</span>
+        <span onClick={handleShowDialog}>退出登陆</span>
       </div>
     </div>
   )
