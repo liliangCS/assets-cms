@@ -30,6 +30,10 @@
       margin-bottom: 10px;
     }
 
+    .content {
+      padding: 8px 24px;
+    }
+
     .handle {
       display: flex;
       justify-content: flex-end;
@@ -77,6 +81,7 @@
 
         .content {
           font-size: 3.7333vw;
+          padding: 1.3333vw 5.3333vw;
         }
 
         .handle {

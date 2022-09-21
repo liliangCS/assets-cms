@@ -23,7 +23,14 @@ body {
   font-size: 20px;
   border-radius: 5px;
 }
-
+@media screen and (max-width: 800px) {
+  .messageBox {
+    padding: 2.6667vw;
+    top: 5.3333vw;
+    font-size: 5.3333vw;
+    border-radius: 1.3333vw;
+  }
+}
 
 // 隐藏
 .hidden {
@@ -35,14 +42,6 @@ body {
   width: 100px !important;
 }
 
-@media screen and (max-width: 800px) {
-  .messageBox {
-    padding: 2.6667vw;
-    top: 5.3333vw;
-    font-size: 5.3333vw;
-    border-radius: 1.3333vw;
-  }
-}
 
 // pc端滚动条样式
 // .scroll-bar-pc {
@@ -57,3 +56,41 @@ body {
 //     border-radius: 5px;
 //   }
 // }
+
+// dialog组件中表单不生效（提升到全局）
+.dialog-form {
+  // 数值
+  font-size: 16px;
+
+  .name {
+    // 数值
+    margin-bottom: 10px;
+  }
+
+  &>div>input {
+    box-sizing: border-box;
+    vertical-align: bottom;
+    // 数值
+    border-radius: 10px;
+    text-indent: 5px;
+    width: 60%;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .dialog-form {
+    font-size: 3.7333vw;
+    
+    .name {
+      margin-bottom: 2.1333vw;
+    }
+
+    &>div>input {
+      // 能够适配到199px宽度设备
+      border-radius: 2.1333vw;
+      text-align: .5333vw;
+      font-size: 3.7333vw;
+      margin-left: 1.8667vw;
+    }
+  }
+}

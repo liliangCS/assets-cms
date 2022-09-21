@@ -8,4 +8,12 @@ const userLogin = (username: string, password: string) => {
   })
 }
 
-export { userLogin }
+// 添加图片的请求
+const addImage = (name: string, imgUrl: string) => {
+  return http.post("/image", {
+    name,
+    imgUrl
+  })
+}
+
+export { userLogin, addImage }

@@ -25,7 +25,7 @@ function Dialog(props: IDialogPropsType) {
         </div>
       </div>
     </div>,
-    document.querySelector("body")!
+    document.querySelector("#dialog")!
   )
 }
 

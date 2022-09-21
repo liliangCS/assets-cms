@@ -9,6 +9,9 @@ class HttpRequest {
       timeout: 5000
     })
     this.instance.interceptors.request.use(config => {
+      if (sessionStorage.getItem("token")) {
+        config.headers!.authorization = sessionStorage.getItem("token")!
+      }
       return config
     })
     this.instance.interceptors.response.use(response => {
