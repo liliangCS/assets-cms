@@ -15,7 +15,9 @@ class HttpRequest {
       return config
     })
     this.instance.interceptors.response.use(response => {
-      messageBox(response.data.msg)
+      if (response.data.msg) {
+        messageBox(response.data.msg)
+      }
       return response.data
     }, reject => {
       messageBox(reject.response.data)
@@ -23,7 +25,7 @@ class HttpRequest {
     })
   }
 
-  get(url: string, params: any) {
+  get(url: string, params?: any) {
     return this.instance.request({
       url,
       params,
@@ -31,7 +33,7 @@ class HttpRequest {
     })
   }
 
-  post(url: string, data: any) {
+  post(url: string, data?: any) {
     return this.instance.request({
       url,
       data,

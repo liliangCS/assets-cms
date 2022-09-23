@@ -16,4 +16,9 @@ const addImage = (name: string, imgUrl: string) => {
   })
 }
 
-export { userLogin, addImage }
+// 获取所有图片的请求
+const getAllImage = (): any => {
+  return http.get("/image")
+}
+
+export { userLogin, addImage, getAllImage }
