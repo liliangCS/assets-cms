@@ -1,8 +1,10 @@
 .search {
-  background-color: #ede3e7;
+  position: sticky;
+  background-color: #f4f5f5;
   box-sizing: border-box;
 
   // 数值
+  top: 60px;
   width: 100%;
   padding: 10px;
 
@@ -24,6 +26,7 @@
 
 @media screen and (max-width: 800px) {
   .search {
+    top: 10.6667vw;
     padding: 1.3333vw;
 
     .btn {

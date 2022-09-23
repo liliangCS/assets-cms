@@ -2,12 +2,13 @@
   display: flex;
   font-size: 0;
   flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, .1);
 
   .image-item {
-    background-color: rgba(0, 0, 0, .1);
     cursor: pointer;
     user-select: none;
     box-sizing: border-box;
+    box-shadow: 0 0 10px #aaa;
     // 数值
     width: 25%;
     height: 16vw;
@@ -22,9 +23,9 @@
       // 数值
       border-radius: 10px;
 
-      &:hover {
-        filter: brightness(1.1);
-      }
+      // &:hover {
+      //   filter: brightness(1.1);
+      // }
     }
   }
 }

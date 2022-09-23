@@ -1,0 +1,36 @@
+.go-top {
+  cursor: pointer;
+  position: fixed;
+  border-radius: 100%;
+  // 数值
+  right: 30px;
+  bottom: 20px;
+  padding: 5px;
+  box-shadow: 0 0 5px #333;
+
+  &:hover {
+    // 数值
+    box-shadow: 0 0 5px red;
+  }
+
+  span {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .go-top {
+    right: 5.3333vw;
+    bottom: 4vw;
+    padding: .8vw;
+    box-shadow: 0 0 .8vw #333;
+
+    &:hover {
+      box-shadow: 0 0 .8vw red;
+    }
+
+    span {
+      font-size: 6.4vw;
+    }
+  }
+}

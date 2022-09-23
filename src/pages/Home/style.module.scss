@@ -13,6 +13,7 @@
     overflow-y: auto;
     flex: 1;
     background-color: #999;
+    scroll-behavior: smooth;
 
     .header {
       position: sticky;

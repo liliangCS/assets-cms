@@ -17,8 +17,16 @@ const addImage = (name: string, imgUrl: string) => {
 }
 
 // 获取所有图片的请求
-const getAllImage = (): any => {
+const getAllImage = () => {
   return http.get("/image")
 }
 
-export { userLogin, addImage, getAllImage }
+// 分页获取图片，默认一页20张图片
+const getPartImage = (pageIndex: number, pageSize = 20) => {
+  return http.post("/image/division", {
+    pageSize,
+    pageIndex
+  })
+}
+
+export { userLogin, addImage, getAllImage, getPartImage }

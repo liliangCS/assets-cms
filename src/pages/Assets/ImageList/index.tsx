@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import style from "./style.module.scss"
-import { getAllImage } from "../../../api"
 
-export default function ImageList() {
-  const [ imageList, setImageList ] = useState<any[]>([])
-  // 初始化/更新图片列表
-  const loadImageData = async () => {
-    const res = await getAllImage()
-    console.log(res)
-    setImageList(res)
-  }
-  // 初始化
-  useEffect(() => {
-    loadImageData()
-  }, [])
+interface IImageType {
+  id: number
+  name: string
+  imgUrl: string
+  createAt: string
+}
+
+interface IPropType {
+  imageList: Array<IImageType>
+}
+
+export default function ImageList(props: IPropType) {
   return (
     <div className={style["image-list"]}>
       {
-        imageList.map(item => {
+        props.imageList.map(item => {
           return (
             <div className={style["image-item"]} key={item.id}>
               <img src={item.imgUrl} alt="" />

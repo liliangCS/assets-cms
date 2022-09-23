@@ -69,6 +69,9 @@ body {
 
   &>div>input {
     box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #999;
+    color: #666;
     vertical-align: bottom;
     // 数值
     border-radius: 10px;
@@ -87,6 +90,7 @@ body {
 
     &>div>input {
       // 能够适配到199px宽度设备
+      border-width: .2667vw;
       border-radius: 2.1333vw;
       text-align: .5333vw;
       font-size: 3.7333vw;

@@ -9,7 +9,7 @@ import useToggleStatus from "./hooks/useToggleStatus"
 export default function Home() {
   // 侧边栏伸缩状态
   const { toggleStatus, handleToggle } = useToggleStatus()
-
+  
   return (
     <div className={style.home}>
       {/* 侧边栏 */}
@@ -17,7 +17,7 @@ export default function Home() {
         <SideBar toggleStatus={toggleStatus}></SideBar>
       </div>
       {/* 主体内容区 */}
-      <div className={style.main}>
+      <div id="main" className={style.main}>
         {/* 头部区域 */}
         <div className={style.header}>
           <Header handleToggle={handleToggle} toggleStatus={toggleStatus}></Header>

@@ -4,7 +4,11 @@ import Dialog from "../../../components/Dialog"
 import messageBox from "../../../utils/messageBox"
 import { addImage } from "../../../api"
 
-export default function Search() {
+interface IPropType {
+  updateData: any
+}
+
+export default function Search(props: IPropType) {
   // dialog组件显示与隐藏
   const [isShow, setIsShow] = useState(false)
   // 图片名称
@@ -32,7 +36,10 @@ export default function Search() {
     if (picName === "" || picUrl === "") return messageBox("图片名称或地址不能为空")
     const res = await addImage(picName, picUrl)
     // 添加成功关闭对话框
-    if (res.status === 200) handleCloseDialog()
+    if (res.status === 200) {
+      handleCloseDialog()
+      props.updateData()
+    }
   }
 
   return (
