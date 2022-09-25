@@ -17,6 +17,14 @@ const useForm = () => {
     setPassword("")
   }
 
+  // useEffect(() => {
+  //   document.documentElement.addEventListener("keyup", loginKey)
+
+  //   return () => {
+  //     document.documentElement.removeEventListener("keyup", loginKey)
+  //   }
+  // }, [])
+
   const loginBtn = async () => {
     const res: IResponseType = await userLogin(username, password)
     if (res.token) {
@@ -26,6 +34,13 @@ const useForm = () => {
       navigate("/home")
     }
   }
+
+  // // 绑定键盘事件
+  // const loginKey = (event: KeyboardEvent) => {
+  //   if (event.code === "Enter") {
+  //     loginBtn()
+  //   }
+  // }
 
   return {
     username,

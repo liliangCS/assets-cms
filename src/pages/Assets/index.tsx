@@ -24,7 +24,7 @@ export default function Assets() {
       {/* 图片检索 */}
       <Search updateData={updateData}></Search>
       {/* 图片列表 */}
-      <ImageList imageList={imageList}></ImageList>
+      <ImageList imageList={imageList} updateData={updateData}></ImageList>
     </div>
   )
 }

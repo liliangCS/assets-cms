@@ -40,6 +40,22 @@ class HttpRequest {
       method: "POST"
     })
   }
+
+  patch(url: string, data?: any) {
+    return this.instance.request({
+      url,
+      data,
+      method: "PATCH"
+    })
+  }
+
+  delete(url: string, data?: any) {
+    return this.instance.request({
+      url,
+      data,
+      method: "DELETE"
+    })
+  }
 }
 
 const http = new HttpRequest("http://127.0.0.1:7788")

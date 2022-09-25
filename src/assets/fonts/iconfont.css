@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1663056390300') format('truetype');
+  src: url('iconfont.ttf?t=1664105542453') format('truetype');
 }
 
 .iconfont {
@@ -17,6 +17,10 @@
 
 .icon-shezhi:before {
   content: "\e63c";
+}
+
+.icon-bianji:before {
+  content: "\e512";
 }
 
 .icon-yiliaohangyedeICON-:before {

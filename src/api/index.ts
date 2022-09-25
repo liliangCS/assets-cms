@@ -29,4 +29,30 @@ const getPartImage = (pageIndex: number, pageSize = 20) => {
   })
 }
 
-export { userLogin, addImage, getAllImage, getPartImage }
+// 根据id查询图片
+const getImageById = (imageId: number): any => {
+  return http.get(`/image/${imageId}`)
+}
+
+// 根据id更新图片信息
+const updateImageById = (imageId: number, name: string, imgUrl: string) => {
+  return http.patch(`/image/${imageId}`, {
+    name,
+    imgUrl
+  })
+}
+
+// 根据id删除图片
+const removeImageById = (imageId: number) => {
+  return http.delete(`/image/${imageId}`)
+}
+
+export {
+  userLogin,
+  addImage,
+  getAllImage,
+  getPartImage,
+  getImageById,
+  updateImageById,
+  removeImageById
+}

@@ -1,0 +1,87 @@
+.image-item {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #aaa;
+  // 数值
+  font-size: 16px;
+  width: 25%;
+  height: 16vw;
+  padding: 5px;
+
+  img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in;
+    // 数值
+    border-radius: 10px;
+  }
+
+  .name {
+    position: absolute;
+    font-family: "楷体";
+    background-color: #fff;
+    // 数值
+    border-radius: 7px;
+    left: 7px;
+    bottom: 5px;
+  }
+
+  .operation {
+    position: absolute;
+    background-color: #fff;
+    opacity: 0.75;
+    // 数值
+    right: 5px;
+    bottom: 5px;
+
+    span {
+      // 数值
+      font-size: 24px;
+
+      &:nth-of-type(1) {
+        // 数值
+        margin-right: 5px;
+      }
+
+      &:hover {
+        background-color: pink;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image-item {
+    font-size: 3.7333vw;
+    width: 50%;
+    height: 46vw;
+    padding: 0.8vw;
+
+    img {
+      border-radius: 2.6667vw;
+    }
+
+    .name {
+      border-radius: 1.0667vw;
+      left: 1.0667vw;
+      bottom: 0.8vw;
+    }
+
+    .operation {
+      right: 0.8vw;
+      bottom: 0.8vw;
+
+      span {
+        font-size: 5.3333vw;
+
+        &:nth-of-type(1) {
+          margin-right: 0.8vw;
+        }
+      }
+    }
+  }
+}
